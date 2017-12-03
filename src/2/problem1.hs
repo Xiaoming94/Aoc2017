@@ -7,4 +7,4 @@ main = do
   inputString <- splitOn "\n" <$> init <$> readFile "./input.txt"
   let listOfLists = map (splitOn "\t") inputString
 
-  print $ calcCheckSum $ map (map (\x -> read x::Integer)) listOfLists
+  print . calcCheckSum $ map (map (\x -> read x::Integer)) listOfLists
