@@ -11,11 +11,11 @@ findAndDiv (x:xs)
     (maxval,minval) = findAndDiv' x xs
 
 findAndDiv' :: Integer -> [Integer] -> (Integer,Integer)
-findAndDiv' x []    = (x,0)
+findAndDiv' x []   = (x,0)
 findAndDiv' x (y:ys)
-  | x `mod` y == 0  = (x,y)
-  | y `mod` x == 0  = (y,x)
-  | otherwise       = findAndDiv' x ys
+  | x `mod` y == 0 = (x,y)
+  | y `mod` x == 0 = (y,x)
+  | otherwise      = findAndDiv' x ys
 
 
 main = do
